@@ -3,14 +3,16 @@ import {
   form, todoInput, todosListEl,
 } from './modules/variables.js';
 import showNotification from './modules/notification.js';
+import setTime from './modules/dates.js';
 
+setTime();
 let todos = JSON.parse(localStorage.getItem('todos')) || [];
 let EditTodoId = -1;
 
 /// define renderTodos function
 function renderTodos() {
   if (todos.length === 0) {
-    todosListEl.innerHTML = '<center>Nothing to do!</center>';
+    todosListEl.innerHTML = '<br><center>Nothing to do!</center>';
     showNotification('Nothing to Do');
     return;
   }
