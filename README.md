@@ -75,7 +75,7 @@ Here are some features of the page:
 
 
 
-[To Do list live demo](https://lucash2022.github.io/To-Do-list-review/)
+[To Do list live demo](https://lucash2022.github.io/To-Do-list-review/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
