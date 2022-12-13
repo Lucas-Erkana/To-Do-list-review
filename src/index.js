@@ -1,31 +1,20 @@
 import './style.css';
+import {
+  form, todoInput, todosListEl,
+} from './modules/variables.js';
+import showNotification from './modules/notification.js';
 
-const form = document.getElementById('todoform');
-const todoInput = document.getElementById('newtodo');
-const todosListEl = document.getElementById('todos-list');
-const notificationEl = document.querySelector('.notification');
 let todos = JSON.parse(localStorage.getItem('todos')) || [];
-
 let EditTodoId = -1;
-// Step 13 add shownotification function when error occurs
-function showNotification(msg) {
-  notificationEl.innerHTML = msg;
-  notificationEl.classList.add('notif-enter');
-  setTimeout(() => {
-    notificationEl.classList.remove('notif-enter');
-  }, 2000);
-}
 
-// Step 6- // define renderTodos function
+/// define renderTodos function
 function renderTodos() {
   if (todos.length === 0) {
     todosListEl.innerHTML = '<center>Nothing to do!</center>';
     showNotification('Nothing to Do');
     return;
   }
-  // Clear element before a re-render
   todosListEl.innerHTML = '';
-  // Render todos
   todos.forEach((todo, index) => {
     todosListEl.innerHTML += `
     <div class="todo" id=${index}>
@@ -45,53 +34,38 @@ todoInput.placeholder = 'type to do here';
 todoInput.style.color = 'black';
 todoInput.style.backgroundColor = 'lightgray';
 todoInput.style.borderRadius = '25px';
-// first render
 renderTodos();
 
-// define SaveTo function do step 3
 function saveTodo() {
   const todoValue = todoInput.value;
-  // check if the todo is empty
   const isEmpty = todoValue === '';
-  // check for duplicate values in array
   const isDuplicate = todos.some((todo) => todo.value.toUpperCase() === todoValue.toUpperCase());
-  // check if it empty
   if (isEmpty) {
-    // add with step 13
     showNotification("Todo's input is empty!");
   } else if (isDuplicate) {
-    // add with step 13
     showNotification("Todo's input already exists!");
   } else {
     // Step 11: add if statement
     if (EditTodoId >= 0) {
-      // update the edit todo
       todos = todos.map((todo, index) => ({
         ...todo,
         value: index === EditTodoId ? todoValue : todo.value,
       }));
       EditTodoId = -1;
     } else {
-      // push task, color and checked object into todos array
       todos.push({
         value: todoValue,
         checked: false,
-        // randomly generate a color
         color: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
 
       });
     }
-
-    // clear the input after task is added
     todoInput.value = '';
   }
 }
 
-// Step 10- Add checkTodo(todoId) funtion
 function checkTodo(todoId) {
   todos = todos.map((todo, index) => ({
-    // value : todo.value,
-    // color : todo.color, both compacted in ...todo
     ...todo,
 
     checked: index === todoId ? !todo.checked : todo.checked,
@@ -99,12 +73,12 @@ function checkTodo(todoId) {
   renderTodos(); // re-render the data
   localStorage.setItem('todos', JSON.stringify(todos));
 }
-// Step 11- Add editTodo function
+
 function editTodo(todId) {
   todoInput.value = todos[todId].value;
   EditTodoId = todId;
 }
-// step 12= add deleteTodo function
+
 function deleteTodo(todoId) {
   todos = todos.filter((todo, index) => index !== todoId);
   // re-renderTOdos
@@ -112,7 +86,7 @@ function deleteTodo(todoId) {
   renderTodos();
   localStorage.setItem('todos', JSON.stringify(todos));
 }
-// Form submit step 2
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   saveTodo();
@@ -120,18 +94,15 @@ form.addEventListener('submit', (event) => {
   localStorage.setItem('todos', JSON.stringify(todos));
 });
 
-// Step 7 Click event listner for  all the todos
 todosListEl.addEventListener('click', (event) => {
   const { target } = event;
   const parentElement = target.parentNode;
 
   if (parentElement.className !== 'todo') return;
 
-  // Step 8: the id that has been click on
   const todo = parentElement;
   const todoId = Number(todo.id);
 
-  // Step 9: target action
   const { action } = target.dataset;
   if (action === 'check') { checkTodo(todoId); }
   if (action === 'edit') { editTodo(todoId); }
