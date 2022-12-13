@@ -1,20 +1,17 @@
-# Project Name <!---Title of Project-->
+# To Do list<!---Title of Project-->
 <a name="readme-top"></a>
 
 
-## Project Name <!---Title of Project-->
+## To Do list<!---Title of Project-->
 
-This project is about a .....................................
+"To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete. You will build a simple website that allows for doing that, and you will do it using ES6 and Webpack!
 
+Project 1:In this project, I will build a simple HTML list of To Do tasks. The list will be styled according to the specifications listed later in this lesson. This simple web page will be built using webpack and served by a webpack dev server.
 
-<div align="center">
+Project 2: In this project, I will implement the CRUD (create, read, update, delete) methods. All the elements of the user interface will be fully functional and your application will be completed.
 
-  <img src="/images/murple_logo.png" alt="logo" width="140"  height="auto" /> <!---Organization logo-->
-  <br/>
+Project 3:In this project, I will add some functionality to your application to make it interactive. The user will also be able to mark task completion by selecting the corresponding checkbox (or undo it by unchecking the checkbox). The updated tasks list will be stored in local storage.
 
-  <h3><b>Microverse</b></h3>
-
-</div>
 
 <!-- TABLE OF CONTENTS -->
 
@@ -36,25 +33,29 @@ This project is about a .....................................
 # 📖 Project name<a name="about-project"></a> <!---Project title-->
 <table style="border: 2px solid black;">
   <tr>
-    <th style="border: 1px solid black;">Desktop Version</th>
-    <th>Mobile Version</th>
-     <th style="border: 1px solid black;">Mobile Version Menu</th>
+    <th style="border: 1px solid black;">Empty List</th>
+    <th style="border: 1px solid black;">Filled List</th>
+     <th style="border: 1px solid black;">Checked List</th>
+     <th style="border: 1px solid black;">Delete List</th>
+
   </tr>
   <tr style="border: 2px solid black;">
-  <td style="border: 1px solid black;"><img src="/images/DesktopVersion.jpg" alt="Desktop Version" width="400"  height="200" /></td>
-  <td><img src="/images/MobileVersion.jpg" alt="Mobile Version" width="150"  height="200" /></td>
-   <td><img src="/images/MobileVersionMenu.jpg" alt="Mobile Version" width="150"  height="200" /></td>
+  <td style="border: 1px solid black;"><img src="images/DesktopVersionADD.jpg" alt="Desktop Version" width="250"  height="200" /></td>
+  <td style="border: 1px solid black;"><img src="images/DesktopVersionLIST.jpg" alt="Desktop Version" width="250"  height="200" /></td>
+  <td style="border: 1px solid black;"><img src="images/DesctopVersionChecked.jpg" alt="Desktop Version" width="250"  height="200" /></td>
+  <td style="border: 1px solid black;"><img src="images/DesctopVersionDelete.jpg" alt="Desktop Version" width="250"  height="200" /></td>
   </tr>
 </table>
-**Project name** is a website that will......................................... 
+**To-do list**  is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete. You will build a simple website that allows for doing that, and you will do it using ES6 and Webpack! 
 
 Here are some features of the page:
 
 <ul>
-  <li>Feature 1</li>
-  <li>Feature 2</li>
-  <li>Feature 3</li>
-  <li>Feature 4</li>
+  <li>Type content to be added</li>
+  <li>Select items on the list</li>
+   <li>Add items to listt</li>
+   <li>Edit items in list</li>
+  <li>Delete items from list</li>
 </ul>
 
 
@@ -72,7 +73,9 @@ Here are some features of the page:
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[html-css_javascipt template](https://lucash2022.github.io/html-css_js_template/)
+
+
+[To Do list live demo](https://lucash2022.github.io/To-Do-list-review/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -85,11 +88,14 @@ Here are some features of the page:
 
 - Open the command prompt in the created directory.
 
-- On the terminal run this command git clone [link to repository]
+- On the terminal run this command git clone [https://github.com/Lucash2022/To-Do-list-review.git]
 
-- Go to the repository folder using command prompt cd Awesome_Book.
+- Go to the repository folder using command prompt cd To-Do-list-review
+
 
 - Install the dev dependencies for linters run npm install.
+
+- To start run npm start
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -97,11 +103,11 @@ Here are some features of the page:
 
 In order to run this project you need:
 
--Google chrome
+-A working browser application (Google chrome, Mozilla Fire fox, Microsoft edge ...)
 
--Internet Explorer
+-VSCode or any other equivalent code editor
 
--Any broswer
+-Node Package Manager (For running, debuging, or installing dependancies to be used)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -112,11 +118,13 @@ Clone this repository to your desired folder:
 
 - Open the command prompt in the created directory.
 
-- On the terminal run this command git clone [link to repository].git
+- On the terminal run this command git clone https://github.com/Lucash2022/To-Do-list-review.git
 
-- Go to the repository folder using command prompt cd [name of repository].
+- Go to the repository folder using command prompt cd To_Do_List
 
 - Install the dev dependencies for linters run npm install.
+
+- To start run npm start
 --->
 
 
@@ -125,7 +133,7 @@ Clone this repository to your desired folder:
 <!-- Author -->
 
 ## 👤**Authors** <a name="authors"></a>
-<h4>Author name</h4>
+<h4>Lucas Erkana</h4>
 
 <img src="/images/github.svg" alt="logo" width="18"  height="18" />[githubhandle](https://github.com/Lucash2022)
 <br>
@@ -155,7 +163,7 @@ Clone this repository to your desired folder:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Lucash2022/Awesome_Book/issues/2).
+Feel free to check the [issues page](https://github.com/Lucash2022/To_Do_List/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -170,6 +178,13 @@ Give a ⭐️ if you like this project!
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
+Tsohle Mokhemisi
+<br>
+<img src="/images/linkedin.svg" alt="logo" width="18"  height="18" />[linkedIn](https://www.linkedin.com/in/tsohle-mokhemisi-3687401b2/)
+<br>
+<img src="/images/github.svg" alt="logo" width="18"  height="18" />[githubhandle](https://github.com/tsohleDev)
+
+
 
 [Font Awesome](https://fontawesome.com/search?q=book&o=r)
 
