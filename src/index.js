@@ -1,12 +1,8 @@
 import './style.css';
-// Select element step 1
+
 const form = document.getElementById('todoform');
-// Select input on form step 5
 const todoInput = document.getElementById('newtodo');
-// Let variables step 4 cretae array first
-// add this when adding step 6- area where task are going to be stored
 const todosListEl = document.getElementById('todos-list');
-// add with step 13
 const notificationEl = document.querySelector('.notification');
 let todos = JSON.parse(localStorage.getItem('todos')) || [];
 
@@ -59,16 +55,11 @@ function saveTodo() {
   const isEmpty = todoValue === '';
   // check for duplicate values in array
   const isDuplicate = todos.some((todo) => todo.value.toUpperCase() === todoValue.toUpperCase());
+  // check if it empty
   if (isEmpty) {
-    // check if it empty
-    // alert("Todo's is empty")
-
     // add with step 13
     showNotification("Todo's input is empty!");
   } else if (isDuplicate) {
-    // display in console whether there is duplicate value
-    // console.log(todoInput.value,' already exist in list')
-    // alert('Todo exists');
     // add with step 13
     showNotification("Todo's input already exists!");
   } else {
@@ -93,7 +84,6 @@ function saveTodo() {
 
     // clear the input after task is added
     todoInput.value = '';
-    // console.log(todos);
   }
 }
 
