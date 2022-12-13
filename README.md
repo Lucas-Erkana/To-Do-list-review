@@ -53,8 +53,8 @@ Here are some features of the page:
 <ul>
   <li>Type content to be added</li>
   <li>Select items on the list</li>
-   <li>Add items to listt</li>
-   <li>Edit items in list</li>
+  <li>Add items to listt</li>
+  <li>Edit items in list</li>
   <li>Delete items from list</li>
 </ul>
 
@@ -65,6 +65,7 @@ Here are some features of the page:
     HTML
     CSS
     Javascript
+    Bootstrap
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
