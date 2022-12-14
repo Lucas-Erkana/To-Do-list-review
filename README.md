@@ -151,6 +151,9 @@ Clone this repository to your desired folder:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
+- Rearrange tasks by drag and drop
+
+- Add mobile version
 
 - Implement additional pages, which will allow the user to Register
 
